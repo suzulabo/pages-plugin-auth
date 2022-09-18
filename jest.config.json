@@ -1,0 +1,5 @@
+{
+  "preset": "ts-jest",
+  "rootDir": "src",
+  "testRegex": ".+\\.test\\.tsx?$"
+}
