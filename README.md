@@ -1,1 +1,1 @@
-# cloudflare-pages-auth
+# Cloudflare Pages Authentication Plugin
