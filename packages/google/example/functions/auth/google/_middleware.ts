@@ -1,4 +1,6 @@
-import GoogleAuthPlugin from '@suzulabo/pages-plugin-auth/google';
+import GoogleAuthPlugin, {
+  GoogleAuthPagesFunction,
+} from '@suzulabo/pages-plugin-auth/google';
 
 type Env = {
   AUTH_GOOGLE_CLIENT_ID: string;
@@ -6,16 +8,23 @@ type Env = {
   HS256_SIGN_KEY: string;
 };
 
-export const onRequest: PagesFunction<Env> = async (context) => {
-  const env = context.env;
-  console.log({ env });
-  return GoogleAuthPlugin({
-    clientID: env.AUTH_GOOGLE_CLIENT_ID,
-    clientSecret: env.AUTH_GOOGLE_CLIENT_SECRET,
-    signAlg: 'HS256',
-    signKey: env.HS256_SIGN_KEY,
-    stateExpirationTime: '10m',
-    scope: 'openid',
-    prompt: 'select_account',
-  })(context);
-};
+export const onRequest: GoogleAuthPagesFunction<Env>[] = [
+  (context) => {
+    const env = context.env;
+    return GoogleAuthPlugin({
+      clientID: env.AUTH_GOOGLE_CLIENT_ID,
+      clientSecret: env.AUTH_GOOGLE_CLIENT_SECRET,
+      signAlg: 'HS256',
+      signKey: env.HS256_SIGN_KEY,
+      stateExpirationTime: '10m',
+      scope: 'openid',
+      prompt: 'select_account',
+    })(context);
+  },
+  ({ data, next }) => {
+    if (data.payload) {
+      return new Response(JSON.stringify(data.payload, undefined, 2));
+    }
+    return next();
+  },
+];

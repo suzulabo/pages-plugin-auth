@@ -1,5 +1,5 @@
 import { base64url, createRemoteJWKSet, jwtVerify } from 'jose';
-import { PluginFunction } from './PluginFunction';
+import { GoogleAuthPluginFunction } from '..';
 import { getRequestHash } from './RequestHash';
 
 // https://developers.google.com/identity/protocols/oauth2/openid-connect#exchangecode
@@ -8,7 +8,12 @@ const JWKS = createRemoteJWKSet(
   new URL('https://www.googleapis.com/oauth2/v3/certs')
 );
 
-export const onRequestGet: PluginFunction = async ({ request, pluginArgs }) => {
+export const onRequestGet: GoogleAuthPluginFunction = async ({
+  request,
+  pluginArgs,
+  data,
+  next,
+}) => {
   const url = new URL(request.url);
   const code = url.searchParams.get('code');
   const state = url.searchParams.get('state');
@@ -39,12 +44,11 @@ export const onRequestGet: PluginFunction = async ({ request, pluginArgs }) => {
   const json = (await res.json()) as { id_token: string };
   const jwt = json.id_token;
 
-  const { payload, protectedHeader } = await jwtVerify(jwt, JWKS, {
+  const { payload } = await jwtVerify(jwt, JWKS, {
     issuer: 'https://accounts.google.com',
     audience: pluginArgs.clientID,
   });
 
-  return new Response(
-    JSON.stringify({ payload, protectedHeader }, undefined, 2)
-  );
+  data.payload = payload;
+  return next();
 };

@@ -1,10 +1,13 @@
 import { base64url, SignJWT } from 'jose';
-import { PluginFunction } from './PluginFunction';
+import { GoogleAuthPluginFunction } from '..';
 import { getRequestHash } from './RequestHash';
 
 // https://developers.google.com/identity/protocols/oauth2/openid-connect#sendauthrequest
 
-export const onRequestGet: PluginFunction = async ({ request, pluginArgs }) => {
+export const onRequestGet: GoogleAuthPluginFunction = async ({
+  request,
+  pluginArgs,
+}) => {
   const url = new URL(request.url);
 
   const reqHash = await getRequestHash(request);
