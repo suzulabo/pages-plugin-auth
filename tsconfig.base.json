@@ -13,13 +13,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
 
-    "target": "ESNext",
-    "module": "ESNext",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "noEmit": true,
-    "isolatedModules": true
-  },
-  "include": ["src"]
+    "isolatedModules": true,
+
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020"],
+    "types": ["@cloudflare/workers-types"]
+  }
 }
