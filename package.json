@@ -1,7 +1,7 @@
 {
   "name": "@suzulabo/pages-plugin-auth",
   "version": "0.0.0",
-  "description": "Cloudflare Pages Authentication middleware",
+  "description": "Cloudflare Pages Authentication Plugin",
   "homepage": "https://github.com/suzulabo/pages-plugin-auth#readme",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   },
   "author": "Kenji Suzuki",
   "keywords": [
-    "Cloudflare Pages",
+    "Cloudflare Pages Plugin",
     "Authentication"
   ],
   "license": "Apache-2.0",
