@@ -18,8 +18,8 @@ export const onRequestGet: PluginFunction = async ({ request, pluginArgs }) => {
 
   {
     const reqHash = await getRequestHash(request);
-    await jwtVerify(state, base64url.decode(pluginArgs.state.signKey), {
-      algorithms: [pluginArgs.state.signAlg],
+    await jwtVerify(state, base64url.decode(pluginArgs.signKey), {
+      algorithms: [pluginArgs.signAlg],
       issuer: url.origin,
       audience: `urn:reqhash:${base64url.encode(reqHash)}`,
     });

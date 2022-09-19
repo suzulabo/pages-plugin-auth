@@ -12,10 +12,10 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   return GoogleAuthPlugin({
     clientID: env.AUTH_GOOGLE_CLIENT_ID,
     clientSecret: env.AUTH_GOOGLE_CLIENT_SECRET,
-    state: {
-      signAlg: 'HS256',
-      signKey: env.HS256_SIGN_KEY,
-      expirationTime: '10m',
-    },
+    signAlg: 'HS256',
+    signKey: env.HS256_SIGN_KEY,
+    stateExpirationTime: '10m',
+    scope: 'openid',
+    prompt: 'select_account',
   })(context);
 };

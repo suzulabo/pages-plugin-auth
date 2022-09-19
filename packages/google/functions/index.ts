@@ -8,20 +8,24 @@ export const onRequestGet: PluginFunction = async ({ request, pluginArgs }) => {
   const url = new URL(request.url);
 
   const reqHash = await getRequestHash(request);
-  const jwt = await new SignJWT({})
-    .setProtectedHeader({ alg: pluginArgs.state.signAlg })
+  const state = await new SignJWT({})
+    .setProtectedHeader({ alg: pluginArgs.signAlg })
     .setIssuedAt()
     .setIssuer(url.origin)
     .setAudience(`urn:reqhash:${base64url.encode(reqHash)}`)
-    .setExpirationTime(pluginArgs.state.expirationTime)
-    .sign(base64url.decode(pluginArgs.state.signKey));
+    .setExpirationTime(pluginArgs.stateExpirationTime)
+    .sign(base64url.decode(pluginArgs.signKey));
 
-  return Response.redirect(
-    `https://accounts.google.com/o/oauth2/v2/auth?response_type=code&scope=openid&prompt=select_account&client_id=${
-      pluginArgs.clientID
-    }&redirect_uri=${encodeURIComponent(
-      request.url + '/callback'
-    )}&state=${jwt}`,
-    302
-  );
+  const redirectURL = new URL('https://accounts.google.com/o/oauth2/v2/auth');
+  redirectURL.searchParams.append('response_type', 'code');
+  redirectURL.searchParams.append('scope', pluginArgs.scope);
+  pluginArgs.loginHint &&
+    redirectURL.searchParams.append('login_hint', pluginArgs.loginHint);
+  pluginArgs.prompt &&
+    redirectURL.searchParams.append('prompt', pluginArgs.prompt);
+  redirectURL.searchParams.append('client_id', pluginArgs.clientID);
+  redirectURL.searchParams.append('redirect_uri', `${request.url}/callback`);
+  redirectURL.searchParams.append('state', state);
+
+  return Response.redirect(redirectURL.toString(), 302);
 };
