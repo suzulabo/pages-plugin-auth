@@ -1,7 +1,7 @@
 {
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "wrangler pages functions build --plugin --outfile=dist/index.js",
+    "build": "wrangler pages functions build --plugin --outfile=dist/index.js --sourcemap",
     "build:watch": "pnpm run build --watch"
   },
   "dependencies": {

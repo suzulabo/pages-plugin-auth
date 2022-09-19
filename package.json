@@ -24,7 +24,8 @@
   },
   "files": [
     "./packages/google/index.d.ts",
-    "./packages/google/dist/index.js"
+    "./packages/google/dist/index.js",
+    "./packages/google/dist/index.js.map"
   ],
   "engines": {
     "node": ">=16"
