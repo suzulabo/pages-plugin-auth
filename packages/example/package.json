@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "wrangler pages dev static"
+  },
+  "dependencies": {
+    "@suzulabo/pages-plugin-auth": "link:../.."
+  }
+}

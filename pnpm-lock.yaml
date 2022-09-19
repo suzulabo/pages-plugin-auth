@@ -32,6 +32,12 @@ importers:
       typescript: 4.8.3
       wrangler: 2.1.4
 
+  packages/example:
+    specifiers:
+      '@suzulabo/pages-plugin-auth': link:../..
+    dependencies:
+      '@suzulabo/pages-plugin-auth': link:../..
+
   packages/google:
     specifiers:
       jose: ^4.9.3

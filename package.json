@@ -16,20 +16,24 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "type": "module",
+  "exports": {
+    "./google": {
+      "types": "./packages/google/index.d.ts",
+      "import": "./packages/google/dist/index.js"
+    }
+  },
   "files": [
-    "dist"
+    "./packages/google/index.d.ts",
+    "./packages/google/dist/index.js"
   ],
   "engines": {
     "node": ">=16"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "test": "jest",
-    "lint": "eslint src && prettier --check src",
-    "build": "tsc -p tsconfig.build.json"
+    "lint": "eslint packages && prettier --check packages",
+    "build": "pnpm -r run build",
+    "build:watch": "pnpm -r run build:watch"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",
