@@ -1,6 +1,5 @@
 import GoogleAuthPlugin, {
   GoogleAuthPagesFunction,
-  // eslint-disable-next-line import/no-unresolved
 } from '@suzulabo/pages-plugin-auth/google';
 
 type Env = {

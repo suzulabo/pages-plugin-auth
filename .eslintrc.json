@@ -1,9 +1,5 @@
 {
   "root": true,
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2015
-  },
   "extends": ["eslint:recommended", "prettier"],
   "overrides": [
     {
@@ -11,7 +7,7 @@
       "parser": "@typescript-eslint/parser",
       "plugins": ["@typescript-eslint", "import"],
       "parserOptions": {
-        "project": ["**/tsconfig.json"]
+        "project": ["tsconfig.json"]
       },
       "extends": [
         "eslint:recommended",
@@ -49,8 +45,7 @@
       "settings": {
         "import/resolver": {
           "typescript": {
-            "alwaysTryTypes": true,
-            "project": "**/tsconfig.json"
+            "alwaysTryTypes": true
           }
         }
       }
