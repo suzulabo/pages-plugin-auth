@@ -1,11 +1,11 @@
 {
-  "name": "@suzulabo/cloudflare-pages-auth",
+  "name": "@suzulabo/pages-plugin-auth",
   "version": "0.0.0",
   "description": "Cloudflare Pages Authentication middleware",
-  "homepage": "https://github.com/suzulabo/cloudflare-pages-auth#readme",
+  "homepage": "https://github.com/suzulabo/pages-plugin-auth#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/suzulabo/cloudflare-pages-auth.git"
+    "url": "https://github.com/suzulabo/pages-plugin-auth.git"
   },
   "author": "Kenji Suzuki",
   "keywords": [
@@ -32,6 +32,7 @@
     "build": "tsc -p tsconfig.build.json"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^3.16.0",
     "@types/jest": "^28.1.8",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
