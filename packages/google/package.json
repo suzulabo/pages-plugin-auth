@@ -1,11 +1,4 @@
 {
-  "name": "@suzulabo/pages-plugin-auth/google",
-  "main": "dist/index.js",
-  "types": "index.d.ts",
-  "files": [
-    "dist/index.js",
-    "index.d.ts"
-  ],
   "scripts": {
     "clean": "rm -rf dist",
     "build": "wrangler pages functions build --plugin --outfile=dist/index.js",
