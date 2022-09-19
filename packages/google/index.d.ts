@@ -1,7 +1,11 @@
 export type PluginArgs = {
   clientID: string;
   clientSecret: string;
-  signKey: string;
+  state: {
+    signAlg: string;
+    signKey: string;
+    expirationTime: string;
+  };
 };
 
 export default function GoogleAuthPlugin(args: PluginArgs): PagesFunction;

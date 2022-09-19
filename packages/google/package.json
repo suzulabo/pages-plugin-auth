@@ -8,6 +8,10 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npx wrangler pages functions build --plugin --outfile=dist/index.js"
+    "build": "wrangler pages functions build --plugin --outfile=dist/index.js",
+    "build:watch": "pnpm run build --watch"
+  },
+  "dependencies": {
+    "jose": "^4.9.3"
   }
 }

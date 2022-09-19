@@ -32,6 +32,12 @@ importers:
       typescript: 4.8.3
       wrangler: 2.1.4
 
+  packages/google:
+    specifiers:
+      jose: ^4.9.3
+    dependencies:
+      jose: 4.9.3
+
   packages/google/example:
     specifiers:
       '@suzulabo/pages-plugin-auth/google': link:..
@@ -3106,6 +3112,10 @@ packages:
       - supports-color
       - ts-node
     dev: true
+
+  /jose/4.9.3:
+    resolution: {integrity: sha512-f8E/z+T3Q0kA9txzH2DKvH/ds2uggcw0m3vVPSB9HrSkrQ7mojjifvS7aR8cw+lQl2Fcmx9npwaHpM/M3GD8UQ==}
+    dev: false
 
   /js-sdsl/4.1.4:
     resolution: {integrity: sha512-Y2/yD55y5jteOAmY50JbUZYwk3CP3wnLPEZnlR1w9oKhITrBEtAxwuWKebFf8hMrPMgbYwFoWK/lH2sBkErELw==}
