@@ -1,52 +1,43 @@
 {
   "root": true,
-  "extends": ["eslint:recommended", "prettier"],
-  "overrides": [
-    {
-      "files": ["*.ts"],
-      "parser": "@typescript-eslint/parser",
-      "plugins": ["@typescript-eslint", "import"],
-      "parserOptions": {
-        "project": ["tsconfig.json"]
-      },
-      "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:import/recommended",
-        "plugin:import/typescript",
-        "prettier"
-      ],
-      "rules": {
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-floating-promises": "error",
-        "@typescript-eslint/no-misused-promises": "error",
-        "require-await": "off",
-        "@typescript-eslint/require-await": "warn",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "import"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-misused-promises": "error",
+    "require-await": "off",
+    "@typescript-eslint/require-await": "warn",
 
-        "import/order": [
-          "warn",
-          {
-            "groups": [
-              "builtin",
-              "external",
-              "type",
-              ["internal", "parent", "sibling", "index"],
-              "object"
-            ],
-            "newlines-between": "always",
-            "alphabetize": { "order": "asc" }
-          }
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "type",
+          ["internal", "parent", "sibling", "index"],
+          "object"
         ],
-
-        "import/no-extraneous-dependencies": "error"
-      },
-      "settings": {
-        "import/resolver": {
-          "typescript": {
-            "alwaysTryTypes": true
-          }
-        }
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc" }
       }
+    ],
+
+    "import/no-extraneous-dependencies": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": true
     }
-  ]
+  }
 }
