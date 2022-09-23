@@ -22,24 +22,22 @@
         "@typescript-eslint/no-misused-promises": "error",
         "require-await": "off",
         "@typescript-eslint/require-await": "warn",
+
         "import/order": [
-          "error",
+          "warn",
           {
             "groups": [
               "builtin",
-              "internal",
               "external",
-              "parent",
-              "sibling",
-              "index",
-              "object",
-              "type"
+              "type",
+              ["internal", "parent", "sibling", "index"],
+              "object"
             ],
-            "alphabetize": {
-              "order": "asc"
-            }
+            "newlines-between": "always",
+            "alphabetize": { "order": "asc" }
           }
         ],
+
         "import/no-extraneous-dependencies": "error"
       },
       "settings": {

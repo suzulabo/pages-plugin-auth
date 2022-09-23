@@ -1,4 +1,5 @@
 import { base64url, SignJWT } from 'jose';
+
 import { GoogleAuthPluginFunction } from '..';
 import { getRequestHash } from './RequestHash';
 
