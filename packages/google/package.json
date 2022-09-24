@@ -1,14 +1,10 @@
 {
   "scripts": {
     "clean": "rm -rf dist",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest functions",
     "build": "wrangler pages functions build --plugin --outfile=dist/index.js --sourcemap",
     "build:watch": "pnpm run build --watch"
   },
   "dependencies": {
     "jose": "^4.9.3"
-  },
-  "devDependencies": {
-    "node-fetch": "^3.2.10"
   }
 }
