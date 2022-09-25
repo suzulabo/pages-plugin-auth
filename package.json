@@ -32,7 +32,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "lint": "eslint packages && prettier --check packages",
+    "lint": "eslint . && prettier --check .",
     "test": "vitest run",
     "build": "pnpm -r run build",
     "build:watch": "pnpm -r run build:watch"

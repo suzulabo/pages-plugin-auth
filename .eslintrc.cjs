@@ -41,12 +41,6 @@ const config = {
       typescript: true,
     },
   },
-  overrides: [
-    {
-      files: ['**/*.cjs'],
-      parser: 'eslint/parser',
-    },
-  ],
 };
 
 module.exports = config;
