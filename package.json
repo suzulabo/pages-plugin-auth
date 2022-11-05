@@ -28,7 +28,7 @@
     "./packages/google/dist/index.js.map"
   ],
   "engines": {
-    "node": ">=16"
+    "node": "16"
   },
   "scripts": {
     "clean": "rm -rf dist",
