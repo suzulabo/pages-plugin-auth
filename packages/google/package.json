@@ -5,6 +5,6 @@
     "build:watch": "pnpm run build --watch"
   },
   "dependencies": {
-    "jose": "^4.9.3"
+    "jose": "^4.10.4"
   }
 }
