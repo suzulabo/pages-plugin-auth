@@ -31,7 +31,6 @@
     "node": "16"
   },
   "scripts": {
-    "clean": "rm -rf dist",
     "lint": "eslint . && prettier --check .",
     "test": "vitest run",
     "build": "pnpm -r run build",
@@ -39,6 +38,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.18.0",
+    "@tsconfig/node16-strictest": "^1.0.4",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "eslint": "^8.26.0",
