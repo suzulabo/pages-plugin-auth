@@ -36,8 +36,8 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "test": "vitest run",
-    "build": "pnpm -r run build",
-    "build:watch": "pnpm -r run build:watch"
+    "clean": "pnpm -r run clean",
+    "build": "pnpm run --filter !example build && pnpm run --filter example build"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.18.0",

@@ -1,7 +1,9 @@
 {
   "private": true,
+  "name": "example",
   "scripts": {
     "start": "wrangler pages dev static",
+    "clean": "rm -rf dist",
     "build": "wrangler pages functions build --outfile=dist/index.js --sourcemap"
   },
   "dependencies": {
