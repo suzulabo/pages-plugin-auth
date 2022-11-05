@@ -1,6 +1,6 @@
-import GoogleAuthPlugin, {
-  GoogleAuthPagesFunction,
-} from '@suzulabo/pages-plugin-auth/google';
+import GoogleAuthPlugin from '@suzulabo/pages-plugin-auth/google';
+
+import type { GoogleAuthPagesFunction } from '@suzulabo/pages-plugin-auth/google';
 
 type Env = {
   AUTH_GOOGLE_CLIENT_ID: string;

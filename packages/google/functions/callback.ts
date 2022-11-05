@@ -1,7 +1,8 @@
 import { base64url, createRemoteJWKSet, jwtVerify } from 'jose';
 
-import { GoogleAuthPluginFunction } from '..';
 import { getRequestHash } from './RequestHash';
+
+import type { GoogleAuthPluginFunction } from '..';
 
 // https://developers.google.com/identity/protocols/oauth2/openid-connect#exchangecode
 
