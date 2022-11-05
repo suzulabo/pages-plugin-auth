@@ -28,27 +28,27 @@
     "./packages/google/dist/index.js.map"
   ],
   "engines": {
-    "node": ">=16"
+    "node": "16"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "lint": "eslint packages && prettier --check packages",
+    "lint": "eslint . && prettier --check .",
+    "test": "vitest run",
     "build": "pnpm -r run build",
     "build:watch": "pnpm -r run build:watch"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.16.0",
-    "@types/jest": "^28.1.8",
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.27.1",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.1",
     "eslint-plugin-import": "^2.26.0",
-    "jest": "^28.1.3",
+    "happy-dom": "^6.0.4",
     "prettier": "^2.6.2",
-    "ts-jest": "^28.0.8",
     "typescript": "^4.8.2",
-    "wrangler": "^2.1.4"
+    "vitest": "^0.23.4",
+    "wrangler": "^2.1.6"
   }
 }
