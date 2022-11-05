@@ -25,12 +25,16 @@ const config = {
         'groups': [
           'builtin',
           'external',
-          'type',
           ['internal', 'parent', 'sibling', 'index'],
           'object',
+          'type',
         ],
         'newlines-between': 'always',
-        'alphabetize': { order: 'asc' },
+        'alphabetize': {
+          order: 'asc',
+          caseInsensitive: false,
+        },
+        'warnOnUnassignedImports': true,
       },
     ],
 
