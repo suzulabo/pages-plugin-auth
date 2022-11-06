@@ -1,6 +1,6 @@
 {
   "name": "@suzulabo/pages-plugin-auth",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Cloudflare Pages Authentication Plugin",
   "homepage": "https://github.com/suzulabo/pages-plugin-auth#readme",
   "repository": {
