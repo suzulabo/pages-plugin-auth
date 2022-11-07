@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@cloudflare/workers-types': ^3.18.0
-      '@suzulabo/code-config-typescript': ^0.0.1
+      '@suzulabo/code-config-typescript': ^0.0.2
       '@tsconfig/node16-strictest': ^1.0.4
       '@typescript-eslint/eslint-plugin': ^5.42.0
       '@typescript-eslint/parser': ^5.42.0
@@ -20,7 +20,7 @@ importers:
       wrangler: ^2.1.15
     devDependencies:
       '@cloudflare/workers-types': 3.18.0
-      '@suzulabo/code-config-typescript': 0.0.1_fthgnqlnlpp2ylv3rzprsppgrq
+      '@suzulabo/code-config-typescript': 0.0.2_fthgnqlnlpp2ylv3rzprsppgrq
       '@tsconfig/node16-strictest': 1.0.4
       '@typescript-eslint/eslint-plugin': 5.42.0_6xw5wg2354iw4zujk2f3vyfrzu
       '@typescript-eslint/parser': 5.42.0_wyqvi574yv7oiwfeinomdzmc3m
@@ -339,8 +339,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /@suzulabo/code-config-typescript/0.0.1_fthgnqlnlpp2ylv3rzprsppgrq:
-    resolution: {integrity: sha512-V6vS/XYeCHZJyLPxiluOOdLdU5j3AU8LGt7D0ezOam6LohXqyM4s21Mt69DOk18ryr1w956RvmrRTNyzSLR9pg==}
+  /@suzulabo/code-config-typescript/0.0.2_fthgnqlnlpp2ylv3rzprsppgrq:
+    resolution: {integrity: sha512-QkERr/igdwqSMRoWfj4Hlu4OknJsau8Bg2gTZkxf9Vv2DzDn7P/SO/oXpO8HpuEqslyGchbLF1hmrCCuZuH9ww==}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^5.42.0
       '@typescript-eslint/parser': ^5.42.0
