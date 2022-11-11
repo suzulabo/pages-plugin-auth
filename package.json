@@ -41,8 +41,9 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.18.0",
-    "@suzulabo/code-config-typescript": "^0.0.2",
-    "@tsconfig/node16-strictest": "^1.0.4",
+    "@suzulabo/eslint-config": "^0.0.1",
+    "@suzulabo/prettier-config": "^0.0.1",
+    "@suzulabo/tsconfig": "^0.0.0",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "eslint": "^8.26.0",
