@@ -1,6 +1,6 @@
 /** @type {import('prettier').Config} */
 const config = {
-  ...require('@suzulabo/code-config-typescript/prettier-config'),
+  ...require('@suzulabo/prettier-config'),
 };
 
 module.exports = config;

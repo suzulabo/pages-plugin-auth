@@ -5,8 +5,9 @@ importers:
   .:
     specifiers:
       '@cloudflare/workers-types': ^3.18.0
-      '@suzulabo/code-config-typescript': ^0.0.2
-      '@tsconfig/node16-strictest': ^1.0.4
+      '@suzulabo/eslint-config': ^0.0.1
+      '@suzulabo/prettier-config': ^0.0.1
+      '@suzulabo/tsconfig': ^0.0.0
       '@typescript-eslint/eslint-plugin': ^5.42.0
       '@typescript-eslint/parser': ^5.42.0
       eslint: ^8.26.0
@@ -20,8 +21,9 @@ importers:
       wrangler: ^2.1.15
     devDependencies:
       '@cloudflare/workers-types': 3.18.0
-      '@suzulabo/code-config-typescript': 0.0.2_fthgnqlnlpp2ylv3rzprsppgrq
-      '@tsconfig/node16-strictest': 1.0.4
+      '@suzulabo/eslint-config': 0.0.1_6ffwt2qnarba5bakucnsr5o6eq
+      '@suzulabo/prettier-config': 0.0.1_prettier@2.7.1
+      '@suzulabo/tsconfig': 0.0.0_typescript@4.8.4
       '@typescript-eslint/eslint-plugin': 5.42.0_6xw5wg2354iw4zujk2f3vyfrzu
       '@typescript-eslint/parser': 5.42.0_wyqvi574yv7oiwfeinomdzmc3m
       eslint: 8.26.0
@@ -339,8 +341,8 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /@suzulabo/code-config-typescript/0.0.2_fthgnqlnlpp2ylv3rzprsppgrq:
-    resolution: {integrity: sha512-QkERr/igdwqSMRoWfj4Hlu4OknJsau8Bg2gTZkxf9Vv2DzDn7P/SO/oXpO8HpuEqslyGchbLF1hmrCCuZuH9ww==}
+  /@suzulabo/eslint-config/0.0.1_6ffwt2qnarba5bakucnsr5o6eq:
+    resolution: {integrity: sha512-wOE2ensNKAL8aFD2nJexwwGLpE60v6qJlAyPO0mBedpBGlBiPwJZw2kL3XttwjwOnWorZ0i/E6aN/Ja8Uy6euw==}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^5.42.0
       '@typescript-eslint/parser': ^5.42.0
@@ -349,6 +351,7 @@ packages:
       eslint-import-resolver-typescript: ^3.5.2
       eslint-plugin-import: ^2.26.0
       prettier: ^2.7.1
+      typescript: ^4.8.4
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.42.0_6xw5wg2354iw4zujk2f3vyfrzu
       '@typescript-eslint/parser': 5.42.0_wyqvi574yv7oiwfeinomdzmc3m
@@ -357,10 +360,23 @@ packages:
       eslint-import-resolver-typescript: 3.5.2_mynvxvmq5qtyojffiqgev4x7mm
       eslint-plugin-import: 2.26.0_goironxpvhcmocjenyhcuwtawi
       prettier: 2.7.1
+      typescript: 4.8.4
     dev: true
 
-  /@tsconfig/node16-strictest/1.0.4:
-    resolution: {integrity: sha512-kp6/DuAoKzHVv5U+p0uOesYbjrEvrYVNdQMl163a+yXXUv9twabvkCGEn3pmVxKXB45JU5MPGolDDWnONZL5ZQ==}
+  /@suzulabo/prettier-config/0.0.1_prettier@2.7.1:
+    resolution: {integrity: sha512-j7voZygkWQD8fKL1VioCpAX6jG5BagzUZu8sJCMi/d6g+5dZXuH2E1pIOjxOxnHSYEJTWCv7F1HdQE0Ra/nosQ==}
+    peerDependencies:
+      prettier: ^2.7.1
+    dependencies:
+      prettier: 2.7.1
+    dev: true
+
+  /@suzulabo/tsconfig/0.0.0_typescript@4.8.4:
+    resolution: {integrity: sha512-ImC/rSk5kZ4ZrCJwix8aYFnuRjVvz/N1135qN1M7n8giC0dcjG5cS6HxOfdwXlzMKtO5ZgJNccvyywSgsE1Hig==}
+    peerDependencies:
+      typescript: ^4.8.4
+    dependencies:
+      typescript: 4.8.4
     dev: true
 
   /@types/better-sqlite3/7.6.2:
